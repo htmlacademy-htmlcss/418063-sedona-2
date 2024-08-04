@@ -8,7 +8,40 @@
     <!-- Шапка сайта -->
     <header class="main-header">
       <!-- Навигация по сайту -->
-      <nav class="navigation"></nav>
+      <nav class="navigation">
+        <!-- Основные разделы сайта -->
+        <ul class="navigation-list">
+          <li class="navigation-item">
+            <a href="#">Главная</a>
+          </li>
+          <li class="navigation-item">
+            <a href="about.html">О Седоне</a>
+          </li>
+          <li class="navigation-item">
+            <a href="catalog.html">Гостиницы</a>
+          </li>
+        </ul>
+        <!-- Навигация пользователя -->
+        <ul class="navigation-user">
+          <!-- Элемент навигации "Поиск по сайту" -->
+          <li class="navigation-item">
+            <!-- Реализация через ссылку, как переход в раздел/ вкладку "Поиск по сайту" -->
+            <a class="navigation-link" href="#">
+              <span class="visually-hidden">Поиск по сайту</span>
+            </a>
+          </li>
+          <!-- Переход в раздел "Избранное" -->
+          <li class="navigation-item">
+            <a class="navigation-link" href="#">
+              <span class="visually-hidden">Избранное</span>
+            </a>
+          </li>
+          <!-- Переход в раздел "Поиск гостиницы" -->
+          <li class="navigation-item">
+            <a class="navigation-link navigation-button button" href="#">Хочу сюда!</a>
+          </li>
+        </ul>
+      </nav>
     </header>
     <!-- Основное содержимое страницы -->
     <main class="main-page">
