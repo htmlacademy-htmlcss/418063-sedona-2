@@ -7,67 +7,74 @@
   </head>
   <body>
     <!-- Шапка сайта -->
-    <header class="main-header">
+    <header class="header-page ">
       <!-- Логотип сайта -->
-      <a class="main-header-logo" href="#">
-        <img class="header-logo" src="#" alt="Логотип города с надписью Седона и минюатюрным изображением основной достопримечательности: моста над каньоном">
+      <a class="header-logo" aria-current="page">
+        <img class="logo-img" src="#" alt="Логотип города с надписью Седона и минюатюрным изображением основной достопримечательности:
+        моста над каньоном">
       </a>
       <!-- Навигация по сайту -->
-      <nav class="main-navigation">
+      <nav class="navigation-page">
         <!-- Основные разделы сайта -->
         <ul class="navigation-list">
+          <!-- Раздел сайта -->
           <li class="navigation-item">
-            <a class="navigation-link navigation-link-current href="#">Главная</a>
+            <a class="navigation-link navigation-link-current" aria-current="page">Главная</a>
           </li>
+          <!-- Раздел сайта -->
           <li class="navigation-item">
             <a class="navigation-link" href="#">О Седоне</a>
           </li>
+          <!-- Раздел сайта -->
           <li class="navigation-item">
             <a class="navigation-link" href="catalog.html">Гостиницы</a>
           </li>
         </ul>
+
         <!-- Навигация пользователя -->
         <ul class="navigation-user">
           <!-- Элемент навигации "Поиск по сайту" -->
           <li class="navigation-user-item">
-            <a class="navigation-link" href="#">
+            <a class="navigation-user-link" href="#">
               <span class="visually-hidden">Поиск по сайту</span>
             </a>
           </li>
           <!-- Элемент навигации "Избранное" -->
           <li class="navigation-user-item">
-            <a class="navigation-link" href="#">
-              <span class="visually-hidden">Избранное</span>
+            <a class="navigation-user-link" href="#">
+              <span class="visually-hidden">Количество гостиниц в разделе `Избранное`</span>
+              <span class="favorites-number">12</span>
             </a>
           </li>
           <!-- Элемент навигации "Поиск гостиницы", вызов модального окна -->
           <li class="navigation-user-item">
-            <a class="navigation-link button" href="#">Хочу сюда!</a>
+            <button class="navigation-button button" type="button" aria-label="Поиск гостиницы">Хочу сюда!</button>
           </li>
         </ul>
       </nav>
     </header>
+
     <!-- Основное содержимое страницы -->
     <main class="main-page">
       <h1 class="visually-hidden">Седона - туристический город в Аризоне</h1>
+
       <!-- Секция с вступительной частью -->
       <section class="intro">
-        <!-- Секция с фоновым изображением-картинкой каньона -->
         <h2 class="visually-hidden">Добро пожаловать в Седону</h2>
-        <img class="intro-slogan" src="#" alt="Приветственная фраза с надписью Седона по центру">
+        <img class="intro-img" src="#" alt="Приветственная фраза с надписью Седона по центру">
       </section>
 
       <!-- Секция с достопримечательностями -->
       <section class="lions">
         <h2 class="visually-hidden">Достопримечательности города</h2>
-          <p class="intro-headline headline">Седона — небольшой городок в Аризоне, заслуживающий большего!</p>
-          <p class="intro-description description">Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
+          <p class="lions-headline headline">Седона — небольшой городок в Аризоне, заслуживающий большего!</p>
+          <p class="lions-description description">Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
 
           <!-- Список достопримечательностей -->
           <ul class="lions-list">
             <!-- Элемент списка достопримечательностей -->
             <li class="lions-item lions-wrapper">
-              <div class="lions-description lions-one">
+              <div class="lions-description lions-description-one">
                 <h3 class="lions-subtitle">Настоящий городок</h3>
                 <p class="lions-subdescription">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
               </div>
@@ -75,32 +82,32 @@
             </li>
             <!-- Элемент списка достопримечательностей -->
             <li class="lions-item">
-              <div class="lions-description lions-two">
+              <div class="lions-description lions-description-two">
                 <h3 class="lions-subtitle">Небольшая площадь</h3>
                 <p class="lions-subdescription">Все достопримечательности находятся очень близко</p>
               </div>
             </li>
             <!-- Элемент списка достопримечательностей -->
             <li class="lions-item">
-              <div class="lions-description lions-three">
+              <div class="lions-description lions-description-three">
                 <h3 class="lions-subtitle">Красивая дорога</h3>
                 <p class="lions-subdescription">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
               </div>
             </li>
             <!-- Элемент списка достопримечательностей -->
             <li class="lions-item">
-              <div class="lions-description lions-four">
+              <div class="lions-description lions-description-four">
                 <h3 class="lions-subtitle">Мало туристов</h3>
                 <p class="lions-subdescription">Большинство едет в Гранд Каньон и толпится там</p>
               </div>
             </li>
             <!-- Элемент списка достопримечательностей -->
             <li class="lions-item lions-wrapper">
-              <img class="lions-img" src="#" alt="Панорамный вид на живописный горный красный каньон с участками зелёного массива">
-              <div class="lions-description lions-five">
+              <div class="lions-description lions-description-five">
                 <h3 class="lions-subtitle">Там есть мост дьявола</h3>
                 <p class="lions-subdescription">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
               </div>
+              <img class="lions-img" src="#" alt="Панорамный вид на живописный горный красный каньон с участками зелёного массива">
             </li>
           </ul>
       </section>
@@ -138,11 +145,7 @@
         <p class="search-description description">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
 
         <!-- Кнопка вызова модального окна -->
-        <!--
-          <button class="search-button button" type="button">Поиск гостиницы в Седоне</button>
-        -->
-        <!-- Ссылка для перехода на модальное окно с поиском гостиницы -->
-        <a class="search-link button" href="#">Хочу сюда!</a>
+        <button class="search-button button" type="button">Поиск гостиницы в Седоне</button>
       </section>
 
       <!-- Секция с формой подписки -->
@@ -155,7 +158,7 @@
         <form action="https://echo.htmlacademy.ru" method="post">
           <!-- Элемент поля ввода email -->
           <label for="email">
-            <span class="visually-hidden">Ваш e-mail:</span>
+            <span class="visually-hidden">Введите ваш e-mail:</span>
           </label>
             <input type="email" name="email" id="email" placeholder="Ваш e-mail">
           <!-- Кнопка отправки формы -->
@@ -163,45 +166,42 @@
         </form>
       </section>
     </main>
-    <!-- Подвал сайта -->
-    <footer class="main-footer">
 
+    <!-- Подвал сайта -->
+    <footer class="footer-page">
       <!-- Внутренняя обёртка подвала -->
       <div class="footer-wrapper">
-        <!-- Блок с социальными сетями -->
-        <div class="footer-social">
-          <!-- Список социальных сетей -->
-          <ul class="social-list">
-            <!-- Мы Вконтакте -->
-            <li class="social-item social-item-vk ">
-              <a class="social-link social-button" href="https://vk.com/htmlacademy">
-                <img src="#" alt="Логотип Вконтакте">
-              </a>
-            </li>
-            <!-- Мы в Телеграм -->
-            <li class="social-item social-item-tg">
-              <a class="social-link social-button" href="t.me/htmlacademy">
-                <img src="#" alt="Логотип Телеграм">
-              </a>
-            </li>
-            <!-- Мы на YouTube -->
-            <li class="social-item social-item-yt">
-              <a class="social-link social-button" href="https://www.youtube.com/user/htmlacademyru">
-                <img src="#" alt="Логотип YouTube">
-              </a>
-            </li>
-          </ul>
-        </div>
+        <!-- Список социальных сетей -->
+        <ul class="social-list">
+          <!-- Мы Вконтакте -->
+          <li class="social-item social-item-vk">
+            <a class="social-link" href="https://vk.com/htmlacademy">
+              <img src="#" alt="Логотип Вконтакте">
+            </a>
+          </li>
+          <!-- Мы в Телеграм -->
+          <li class="social-item social-item-tg">
+            <a class="social-link" href="t.me/htmlacademy">
+              <img src="#" alt="Логотип Телеграм">
+            </a>
+          </li>
+          <!-- Мы на YouTube -->
+          <li class="social-item social-item-yt">
+            <a class="social-link" href="https://www.youtube.com/user/htmlacademyru">
+              <img src="#" alt="Логотип YouTube">
+            </a>
+          </li>
+        </ul>
 
-        <!-- Блок с контактным телефоном -->
+        <!-- Блок с контактными данными -->
         <div class="contact">
           <a class="contact-tel" href="tel:+78128121212">+7 (812) 812-12-12</a>
         </div>
 
         <!-- Блок с логотипом сайта разработчика -->
-        <div class="development-logo">
-          <a href="https://htmlacademy.ru/">
-            <img src="#" alt="Логотип разработчика сайта HTML Academy">
+        <div class="development">
+          <a class="development-link" href="https://htmlacademy.ru/">
+            <img class="development-logo" src="#" alt="Логотип разработчика сайта HTML Academy">
           </a>
         </div>
       </div>

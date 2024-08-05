@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,58 +7,65 @@
 </head>
 <body>
   <!-- Шапка сайта -->
-  <header class="main-header">
+  <header class="header-page ">
     <!-- Логотип сайта -->
-    <a class="main-header-logo" href="#">
-      <img class="header-logo" src="#" alt="Логотип города с надписью Седона и минюатюрным изображением основной достопримечательности: моста над каньоном">
+    <a class="header-logo" href="index.html">
+      <img class="logo-img" src="#" alt="Логотип города с надписью Седона и минюатюрным изображением основной достопримечательности:
+      моста над каньоном">
     </a>
     <!-- Навигация по сайту -->
-    <nav class="main-navigation">
+    <nav class="navigation-page">
       <!-- Основные разделы сайта -->
       <ul class="navigation-list">
+        <!-- Раздел сайта -->
         <li class="navigation-item">
           <a class="navigation-link" href="index.html">Главная</a>
         </li>
+        <!-- Раздел сайта -->
         <li class="navigation-item">
           <a class="navigation-link" href="#">О Седоне</a>
         </li>
+        <!-- Раздел сайта -->
         <li class="navigation-item">
-          <a class="navigation-link navigation-link-current" href="#">Гостиницы</a>
+          <a class="navigation-link navigation-link-current" aria-current="page">Гостиницы</a>
         </li>
       </ul>
+
       <!-- Навигация пользователя -->
       <ul class="navigation-user">
         <!-- Элемент навигации "Поиск по сайту" -->
         <li class="navigation-user-item">
-          <a class="navigation-link" href="#">
+          <a class="navigation-user-link" href="#">
             <span class="visually-hidden">Поиск по сайту</span>
           </a>
         </li>
         <!-- Элемент навигации "Избранное" -->
         <li class="navigation-user-item">
-          <a class="navigation-link" href="#">
-            <span class="visually-hidden">Избранное</span>
+          <a class="navigation-user-link" href="#">
+            <span class="visually-hidden">Количество гостиниц в разделе `Избранное`</span>
+            <span class="favorites-number">12</span>
           </a>
         </li>
         <!-- Элемент навигации "Поиск гостиницы", вызов модального окна -->
         <li class="navigation-user-item">
-          <a class="navigation-link button" href="#">Хочу сюда!</a>
+          <button class="navigation-button button" type="button" aria-label="Поиск гостиницы">Хочу сюда!</button>
         </li>
       </ul>
     </nav>
   </header>
 
   <!-- Основное содержимое страницы -->
-  <main class="main-catalog">
+  <main class="catalog-page">
     <h1 class="catalog-title">Гостиницы Седоны</h1>
+
     <!-- Внутренняя навигация по странице -->
-    <ul class="breadcrumbs">
+    <ul class="catalog-inner-nav breadcrumbs">
       <li class="breadcrumbs-item">
         <a class="breadcrumbs-link" href="index.html">
           <span class="visually-hidden">Главная</span>
         </a>
       </li>
-      <li class="breadcrumbs-item">
+      <li class="breadcrumbs-item breadcrumbs-item-current">
         <a class="breadcrumbs-link">Гостиницы</a>
       </li>
     </ul>
@@ -66,12 +73,12 @@
     <!-- Секция подбора жилья по категориям и фильтрам -->
     <section class="catalog-filter">
       <h2 class="visually-hidden">Подбор жилья по категориям и фильтрам</h2>
-      <!-- Форма с фильтрами -->
+
+      <!-- Форма -->
       <form class="catalog-form" action="https://echo.htmlacademy.ru" method="get">
         <!-- Группа с элементами форм - checkbox -->
         <fieldset class="catalog-form-group">
           <legend class="catalog-form-title">Инфраструктура:</legend>
-          <!-- Список элемент формы - checkbox -->
           <ul class="catalog-form-list">
             <!-- Элемент формы - checkbox -->
             <li class="catalog-form-item">
@@ -96,7 +103,6 @@
         <!-- Группа с элементами форм - radio -->
         <fieldset class="catalog-form-group">
           <legend class="catalog-form-title">Тип жилья:</legend>
-          <!-- Список элемент формы - radio -->
           <ul class="catalog-form-list">
             <!-- Элемент формы - radio -->
             <li class="catalog-form-item">
@@ -118,19 +124,34 @@
             </li>
           </ul>
         </fieldset>
-        <!-- Группа с элементом формы - range -->
+
+        <!-- Группа с элементами форм - number -->
         <fieldset class="catalog-form-group">
           <legend class="catalog-form-title">Стоимость, ₽:</legend>
-            <label class="visually-hidden" for="price-min">Минимальная стоимость</label>
-            <input type="number" id="price-min" name="price-min" placeholder="От" value="0">
-
-            <label class="visually-hidden" for="price-max">Максимальная стоимость</label>
-            <input type="number" id="price-max" name="price-max" placeholder="До" value="9000">
-            <!-- Доделать "бегунок" -->
+          <!-- Внутренняя обёртка блока -->
+          <div class="catalog-price-wrapper">
+            <!-- Блок с указанием минимальной стоимости -->
+            <div class="catalog-price">
+              <label class="visually-hidden" for="price-min">Минимальная стоимость</label>
+              <input type="number" id="price-min" name="price-min" value="0">
+              <span class="price-min">От</span>
+            </div>
+            <!-- Блок с указанием максимальной стоимости -->
+            <div class="catalog-price">
+              <label class="visually-hidden" for="price-max">Максимальная стоимость</label>
+              <input type="number" id="price-max" name="price-max" value="9000">
+              <span class="price-max">До</span>
+            </div>
+          </div>
+          <!-- Блок с элементом формы - range -->
+          <div class="catalog-price">
+            <label class="visually-hidden" for="price">Стоимость жилья:</label>
+            <input type="range" id="price" name="price" min="0" max="9000">
+          </div>
         </fieldset>
         <!-- Кнопки формы -->
-        <div class="form-buttons">
-          <button class="button-submit button" type="submit">Применить</button>
+        <div class="catalog-form-buttons">
+          <button class="button-apply button" type="submit">Применить</button>
           <button class="button-reset button" type="reset">Сбросить</button>
         </div>
       </form>
@@ -139,13 +160,16 @@
     <!-- Секция c каталогом жилья -->
     <section class="catalog">
       <h2 class="visually-hidden">Каталог жилья в Седоне</h2>
-      <!-- Блок с сортировкой и выводом результата -->
+
+      <!-- Блок с результатами поиска -->
       <div class="catalog-sorting ">
-        <!-- Доработать блок с итоговым количеством подходящего найденного жилья -->
-        <p>Найдено гостинец: 38</p>
+        <p class="sorting-result">Найдено гостинец:
+          <span class="sorting-result-number">38</span>
+        </p>
+        <!-- Внутренняя обёртка блока -->
         <div class="catalog-sorting-wrapper">
           <!-- Раскрывающийся список сортировки -->
-          <select class="select-control" aria-label="Сортировка">
+          <select class="select-control" aria-label="Сортировка объектов жилья">
             <option value="popular">Сначала популярные</option>
             <option value="cheap" selected>Сначала дешёвые</option>
             <option value="expensive">Сначала дорогие</option>
@@ -155,21 +179,21 @@
           <ul class="catalog-list-display">
             <!-- Отображение объекта на странице (иконка) -->
             <li class="catalog-position-card">
-              <a href="#" class="button button-icon button-active" >
+              <button class="button-icon button-active" type="button">
                 <span class="visually-hidden">Отобразить объекты в виде иконок</span>
-              </a>
+              </button>
             </li>
             <!-- Отображение объекта на странице (галерея) -->
             <li class="catalog-position-card">
-              <a href="#" class="button button-gallery">
+              <button class="button-gallery" type="button">
                 <span class="visually-hidden">Отобразить объекты в виде галереи</span>
-              </a>
+              </button>
             </li>
             <!-- Отображение объекта на странице (список) -->
             <li class="catalog-position-card">
-              <a href="#" class="button button-list">
+              <button class="button-list" type="button">
                 <span class="visually-hidden">Отобразить объекты в виде списка</span>
-              </a>
+              </button>
             </li>
           </ul>
         </div>
@@ -180,8 +204,10 @@
       <ul class="catalog-card-list">
         <!-- Карточка жилья -->
         <li class="catalog-card-item">
-          <img src="#" alt=""> <!-- Дописать альтернативный текст -->
-          <h3 class="catalog-card-title">Amara Resort & Spa</h3>
+          <a class="catalog-card-link" href="#">
+            <img class="catalog-card-img" src="#" alt="Вид из пещеры в красных скалах на ночное небо, усыпанное яркими звёздами">
+            <h3 class="catalog-card-title">Amara Resort & Spa</h3>
+          </a>
           <div class="catalog-card-description">
             <span class="catalog-card-type">Гостиница</span>
             <span class="catalog-card-price">От 4000 ₽</span>
@@ -199,8 +225,11 @@
         </li>
         <!-- Карточка жилья -->
         <li class="catalog-card-item">
-          <img src="#" alt=""> <!-- Дописать альтернативный текст -->
-          <h3 class="catalog-card-title">Villas at Poco Diablo</h3>
+          <a class="catalog-card-link" href="#">
+            <img class="catalog-card-img" src="#" alt="Панорамный вид на высокую гору после дождя, при закате яркого солнца, радуги
+            и тёмных облаков">
+            <h3 class="catalog-card-title">Villas at Poco Diablo</h3>
+          </a>
           <div class="catalog-card-description">
             <span class="catalog-card-type">Гостиница</span>
             <span class="catalog-card-price">От 5000 ₽</span>
@@ -218,8 +247,11 @@
         </li>
         <!-- Карточка жилья -->
         <li class="catalog-card-item">
-          <img src="#" alt=""> <!-- Дописать альтернативный текст -->
-          <h3 class="catalog-card-title">Desert Quail Inn</h3>
+          <a class="catalog-card-link" href="#">
+            <img class="catalog-card-img" src="#" alt="Вид из гостиницы на высокую гору с красными скалами. На фоне яркого голубого неба и
+            зелёного массива у подножия">
+            <h3 class="catalog-card-title">Desert Quail Inn</h3>
+          </a>
           <div class="catalog-card-description">
             <span class="catalog-card-type">Гостиница</span>
             <span class="catalog-card-price">От 2500 ₽</span>
@@ -237,8 +269,10 @@
         </li>
         <!-- Карточка жилья -->
         <li class="catalog-card-item">
-          <img src="#" alt=""> <!-- Дописать альтернативный текст -->
-          <h3 class="catalog-card-title">GreenTree Inn</h3>
+          <a class="catalog-card-link" href="#">
+            <img class="catalog-card-img" src="#" alt="Высокие красные скалы на фоне ярко-оранжевого заката и усыпанным звёздами небом">
+            <h3 class="catalog-card-title">GreenTree Inn</h3>
+          </a>
           <div class="catalog-card-description">
             <span class="catalog-card-type">Гостиница</span>
             <span class="catalog-card-price">От 1500 ₽</span>
@@ -271,14 +305,13 @@
           <a class="pagination-link" href="#">4</a>
         </li>
         <li class="pagination-item">
-          <span>...</span>
+          <span class="pagination-item pagination-item-next">...</span>
         </li>
         <li class="pagination-item">
           <a class="pagination-link" href="#">10</a>
         </li>
       </ul>
     </section>
-
 
     <!-- Секция с формой подписки -->
     <section class="subscription">
@@ -290,7 +323,7 @@
       <form action="https://echo.htmlacademy.ru" method="post">
         <!-- Элемент поля ввода email -->
         <label for="email">
-          <span class="visually-hidden">Ваш e-mail:</span>
+          <span class="visually-hidden">Введите ваш e-mail:</span>
         </label>
           <input type="email" name="email" id="email" placeholder="Ваш e-mail">
         <!-- Кнопка отправки формы -->
@@ -299,44 +332,40 @@
     </section>
   </main>
   <!-- Подвал сайта -->
-  <footer class="main-footer">
-
+  <footer class="footer-page">
     <!-- Внутренняя обёртка подвала -->
     <div class="footer-wrapper">
-      <!-- Блок с социальными сетями -->
-      <div class="footer-social">
-        <!-- Список социальных сетей -->
-        <ul class="social-list">
-          <!-- Мы Вконтакте -->
-          <li class="social-item social-item-vk ">
-            <a class="social-link social-button" href="https://vk.com/htmlacademy">
-              <img src="#" alt="Логотип Вконтакте">
-            </a>
-          </li>
-          <!-- Мы в Телеграм -->
-          <li class="social-item social-item-tg">
-            <a class="social-link social-button" href="t.me/htmlacademy">
-              <img src="#" alt="Логотип Телеграм">
-            </a>
-          </li>
-          <!-- Мы на YouTube -->
-          <li class="social-item social-item-yt">
-            <a class="social-link social-button" href="https://www.youtube.com/user/htmlacademyru">
-              <img src="#" alt="Логотип YouTube">
-            </a>
-          </li>
-        </ul>
-      </div>
+      <!-- Список социальных сетей -->
+      <ul class="social-list">
+        <!-- Мы Вконтакте -->
+        <li class="social-item social-item-vk">
+          <a class="social-link" href="https://vk.com/htmlacademy">
+            <img src="#" alt="Логотип Вконтакте">
+          </a>
+        </li>
+        <!-- Мы в Телеграм -->
+        <li class="social-item social-item-tg">
+          <a class="social-link" href="t.me/htmlacademy">
+            <img src="#" alt="Логотип Телеграм">
+          </a>
+        </li>
+        <!-- Мы на YouTube -->
+        <li class="social-item social-item-yt">
+          <a class="social-link" href="https://www.youtube.com/user/htmlacademyru">
+            <img src="#" alt="Логотип YouTube">
+          </a>
+        </li>
+      </ul>
 
-      <!-- Блок с контактным телефоном -->
+      <!-- Блок с контактными данными -->
       <div class="contact">
         <a class="contact-tel" href="tel:+78128121212">+7 (812) 812-12-12</a>
       </div>
 
       <!-- Блок с логотипом сайта разработчика -->
-      <div class="development-logo">
-        <a href="https://htmlacademy.ru/">
-          <img src="#" alt="Логотип разработчика сайта HTML Academy">
+      <div class="development">
+        <a class="development-link" href="https://htmlacademy.ru/">
+          <img class="development-logo" src="#" alt="Логотип разработчика сайта HTML Academy">
         </a>
       </div>
     </div>
