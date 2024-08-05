@@ -7,6 +7,8 @@
   <body>
     <!-- Шапка сайта -->
     <header class="main-header">
+      <!-- Логотип сайта -->
+      <img class="logo-page" src="#" alt="Логотип города с надписью Седона и минюатюрным изображением основной достопримечательности: моста над каньоном">
       <!-- Навигация по сайту -->
       <nav class="navigation">
         <!-- Основные разделы сайта -->
@@ -45,31 +47,156 @@
     </header>
     <!-- Основное содержимое страницы -->
     <main class="main-page">
-      <!-- Секция с вводной частью -->
-      <section class="intro"></section>
+      <h1 class="visually-hidden">Седона - туристический город в Аризоне</h1>
+      <!-- Секция с вступительной частью -->
+      <section class="intro">
+        <!-- Секция с фоновым изображением-картинкой каньона -->
+        <img class="intro-slogan" src="#" alt="Приветственная фраза с надписью Седона по центру">
+        <!-- Блок с описание вступительной части -->
+        <div class="intro-wrapper">
+          <h2 class="intro-title">Седона — небольшой городок в Аризоне, заслуживающий большего!</h2>
+          <p class="intro-description">Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
+        </div>
+      </section>
 
       <!-- Секция с достопримечательностями -->
-      <section class="lions"></section>
+      <section class="lions">
+        <h2 class="visually-hidden">Достопримечательности города</h2>
+        <!-- Список достопримечательностей -->
+        <ul class="lions-list">
+          <!-- Элемент списка достопримечательностей -->
+          <li class="lions-item lions-wrapper">
+            <div class="lions-description lions-one">
+              <h3 class="lions-subtitle">Настоящий городок</h3>
+              <p class="lions-subdescription">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
+            </div>
+            <img class="lions-img" src="#" alt="Изображение деревянного здания нежно-зелёного цвета на фоне цветущей зелении и гор">
+          </li>
+          <!-- Элемент списка достопримечательностей -->
+          <li class="lions-item">
+            <div class="lions-description lions-two">
+              <h3 class="lions-subtitle">Небольшая площадь</h3>
+              <p class="lions-subdescription">Все достопримечательности находятся очень близко</p>
+            </div>
+          </li>
+          <!-- Элемент списка достопримечательностей -->
+          <li class="lions-item">
+            <div class="lions-description lions-three">
+              <h3 class="lions-subtitle">Красивая дорога</h3>
+              <p class="lions-subdescription">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+            </div>
+          </li>
+          <!-- Элемент списка достопримечательностей -->
+          <li class="lions-item">
+            <div class="lions-description lions-four">
+              <h3 class="lions-subtitle">Мало туристов</h3>
+              <p class="lions-subdescription">Большинство едет в Гранд Каньон и толпится там</p>
+            </div>
+          </li>
+          <!-- Элемент списка достопримечательностей -->
+          <li class="lions-item lions-wrapper">
+            <img class="lions-img" src="#" alt="Панорамный вид на живописный горный красный каньон с участками зелёного массива">
+            <div class="lions-description lions-five">
+              <h3 class="lions-subtitle">Там есть мост дьявола</h3>
+              <p class="lions-subdescription">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
+            </div>
+          </li>
+        </ul>
+      </section>
 
       <!-- Секция преимуществ -->
-      <section class="features"></section>
+      <section class="advantages">
+        <h2 class="visually-hidden">Преимущества отдыха в Седоне</h2>
+
+        <p class="advantages-slogan">Приезжайте в Седону отдохнуть в комфорте и уюте!</p>
+        <p class="advantages-description">Опытный персонал и качественное обслуживание!</p>
+        <!-- Список преимуществ -->
+        <ul class="advantages-list">
+          <!-- Элемент преимущества -->
+          <li class="advantages-item advantages-house">
+            <h3 class="advantages-subtitle">Жильё</h3>
+            <p class="advantages-subdescription">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
+          </li>
+          <!-- Элемент преимущества -->
+          <li class="advantages-item advantages-food">
+            <h3 class="advantages-subtitle">Еда</h3>
+            <p class="advantages-subdescription">Всегда заказывайте топовый фирменный бургер, вы не разочаруетесь!</p>
+          </li>
+          <!-- Элемент преимущества -->
+          <li class="advantages-item advantages-souvenir">
+            <h3 class="advantages-subtitle">Сувениры</h3>
+            <p class="advantages-subdescription">Не только китайского, но и настоящего местного производства!</p>
+          </li>
+        </ul>
+      </section>
 
       <!-- Секция с поиском гостиницы -->
-      <section class="search"></section>
+      <section class="search">
+        <h2 class="visually-hidden">Поиск гостиницы в Седоне</h2>
+        <p class="search-slogan">Заинтересовались?</p>
+        <p class="search-description">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+
+        <!-- Кнопка открытия модального окна -->
+        <button class="search-button button" type="button">Поиск гостиницы в Седоне</button>
+      </section>
 
       <!-- Секция с формой подписки -->
-      <section class="subscription"></section>
+      <section class="subscription">
+        <h2 class="visually-hidden">Подписка на новости</h2>
+        <p class="subscription-slogan">Подпишитесь на рассылку</p>
+        <p class="subscription-description">Только полезная информация и никакого спама, честное бойскаутское!</p>
+
+        <!-- Форма подписки на новости -->
+        <form action="#" method="post">
+          <!-- Элемент поля ввода email -->
+          <label for="email">
+            <span class="visually-hidden">Ваш e-mail:</span>
+          </label>
+            <input type="email" name="email" id="email" placeholder="Ваш e-mail" required>
+          <!-- Кнопка отправки формы -->
+          <button class="subscription-button button" type="submit">Подписаться</button>
+        </form>
+      </section>
     </main>
     <!-- Подвал сайта -->
     <footer class="main-footer">
-      <!-- Блок с социальными сетями -->
-      <div class="social"></div>
 
-      <!-- Блок с контактным телефоном -->
-      <div class="contact"></div>
+      <!-- Внутренняя обёртка подвала -->
+      <div class="footer-wrapper">
+        <!-- Блок с социальными сетями -->
+        <div class="footer-social">
+          <!-- Список социальных сетей -->
+          <ul class="social-list">
+            <!-- Мы Вконтакте -->
+            <li class="social-item">
+              <a class="social-link social-button" href="#">
+                <img src="#" alt="Логотип Вконтакте"></a>
+            </li>
+            <!-- Мы в Twitter -->
+            <li class="social-item">
+              <a class="social-link social-button" href="#">
+                <img src="#" alt="Логотип Twitter"></a>
+            </li>
+            <!-- Мы на YouTube -->
+            <li class="social-item">
+              <a class="social-link social-button" href="#">
+                <img src="#" alt="Логотип YouTube"></a>
+            </li>
+          </ul>
+        </div>
 
-      <!-- Блок с логотипом сайта разработчика -->
-      <div class="logo-development"></div>
+        <!-- Блок с контактным телефоном -->
+        <div class="contact">
+          <a href="tel:+78128121212">+7 (812) 812-12-12</a>
+        </div>
+
+        <!-- Блок с логотипом сайта разработчика -->
+        <div class="logo-development">
+          <a href="#">
+            <img src="#" alt="Логотип разработчика сайта">
+          </a>
+        </div>
+      </div>
     </footer>
   </body>
 </html>
