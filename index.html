@@ -8,16 +8,18 @@
     <!-- Шапка сайта -->
     <header class="main-header">
       <!-- Логотип сайта -->
-      <img class="logo-page" src="#" alt="Логотип города с надписью Седона и минюатюрным изображением основной достопримечательности: моста над каньоном">
+      <a class="main-header-logo" href="#">
+        <img class="header-logo" src="#" alt="Логотип города с надписью Седона и минюатюрным изображением основной достопримечательности: моста над каньоном">
+      </a>
       <!-- Навигация по сайту -->
-      <nav class="navigation">
+      <nav class="main-navigation">
         <!-- Основные разделы сайта -->
         <ul class="navigation-list">
           <li class="navigation-item">
             <a href="#">Главная</a>
           </li>
           <li class="navigation-item">
-            <a href="about.html">О Седоне</a>
+            <a href="#">О Седоне</a>
           </li>
           <li class="navigation-item">
             <a href="catalog.html">Гостиницы</a>
@@ -26,21 +28,20 @@
         <!-- Навигация пользователя -->
         <ul class="navigation-user">
           <!-- Элемент навигации "Поиск по сайту" -->
-          <li class="navigation-item">
-            <!-- Реализация через ссылку, как переход в раздел/ вкладку "Поиск по сайту" -->
+          <li class="navigation-user-item">
             <a class="navigation-link" href="#">
               <span class="visually-hidden">Поиск по сайту</span>
             </a>
           </li>
-          <!-- Переход в раздел "Избранное" -->
-          <li class="navigation-item">
+          <!-- Элемент навигации "Избранное" -->
+          <li class="navigation-user-item">
             <a class="navigation-link" href="#">
               <span class="visually-hidden">Избранное</span>
             </a>
           </li>
-          <!-- Переход в раздел "Поиск гостиницы" -->
-          <li class="navigation-item">
-            <a class="navigation-link navigation-button button" href="#">Хочу сюда!</a>
+          <!-- Элемент навигации "Поиск гостиницы", вызов модального окна -->
+          <li class="navigation-user-item">
+            <a class="navigation-link button" href="#">Хочу сюда!</a>
           </li>
         </ul>
       </nav>
@@ -51,65 +52,64 @@
       <!-- Секция с вступительной частью -->
       <section class="intro">
         <!-- Секция с фоновым изображением-картинкой каньона -->
+        <h2 class="visually-hidden">Добро пожаловать в Седону</h2>
         <img class="intro-slogan" src="#" alt="Приветственная фраза с надписью Седона по центру">
-        <!-- Блок с описание вступительной части -->
-        <div class="intro-wrapper">
-          <h2 class="intro-title">Седона — небольшой городок в Аризоне, заслуживающий большего!</h2>
-          <p class="intro-description">Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
-        </div>
       </section>
 
       <!-- Секция с достопримечательностями -->
       <section class="lions">
         <h2 class="visually-hidden">Достопримечательности города</h2>
-        <!-- Список достопримечательностей -->
-        <ul class="lions-list">
-          <!-- Элемент списка достопримечательностей -->
-          <li class="lions-item lions-wrapper">
-            <div class="lions-description lions-one">
-              <h3 class="lions-subtitle">Настоящий городок</h3>
-              <p class="lions-subdescription">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
-            </div>
-            <img class="lions-img" src="#" alt="Изображение деревянного здания нежно-зелёного цвета на фоне цветущей зелении и гор">
-          </li>
-          <!-- Элемент списка достопримечательностей -->
-          <li class="lions-item">
-            <div class="lions-description lions-two">
-              <h3 class="lions-subtitle">Небольшая площадь</h3>
-              <p class="lions-subdescription">Все достопримечательности находятся очень близко</p>
-            </div>
-          </li>
-          <!-- Элемент списка достопримечательностей -->
-          <li class="lions-item">
-            <div class="lions-description lions-three">
-              <h3 class="lions-subtitle">Красивая дорога</h3>
-              <p class="lions-subdescription">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
-            </div>
-          </li>
-          <!-- Элемент списка достопримечательностей -->
-          <li class="lions-item">
-            <div class="lions-description lions-four">
-              <h3 class="lions-subtitle">Мало туристов</h3>
-              <p class="lions-subdescription">Большинство едет в Гранд Каньон и толпится там</p>
-            </div>
-          </li>
-          <!-- Элемент списка достопримечательностей -->
-          <li class="lions-item lions-wrapper">
-            <img class="lions-img" src="#" alt="Панорамный вид на живописный горный красный каньон с участками зелёного массива">
-            <div class="lions-description lions-five">
-              <h3 class="lions-subtitle">Там есть мост дьявола</h3>
-              <p class="lions-subdescription">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
-            </div>
-          </li>
-        </ul>
+          <p class="intro-headline headline">Седона — небольшой городок в Аризоне, заслуживающий большего!</p>
+          <p class="intro-description description">Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
+
+          <!-- Список достопримечательностей -->
+          <ul class="lions-list">
+            <!-- Элемент списка достопримечательностей -->
+            <li class="lions-item lions-wrapper">
+              <div class="lions-description lions-one">
+                <h3 class="lions-subtitle">Настоящий городок</h3>
+                <p class="lions-subdescription">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
+              </div>
+              <img class="lions-img" src="#" alt="Изображение деревянного здания нежно-зелёного цвета на фоне цветущей зелении и гор">
+            </li>
+            <!-- Элемент списка достопримечательностей -->
+            <li class="lions-item">
+              <div class="lions-description lions-two">
+                <h3 class="lions-subtitle">Небольшая площадь</h3>
+                <p class="lions-subdescription">Все достопримечательности находятся очень близко</p>
+              </div>
+            </li>
+            <!-- Элемент списка достопримечательностей -->
+            <li class="lions-item">
+              <div class="lions-description lions-three">
+                <h3 class="lions-subtitle">Красивая дорога</h3>
+                <p class="lions-subdescription">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+              </div>
+            </li>
+            <!-- Элемент списка достопримечательностей -->
+            <li class="lions-item">
+              <div class="lions-description lions-four">
+                <h3 class="lions-subtitle">Мало туристов</h3>
+                <p class="lions-subdescription">Большинство едет в Гранд Каньон и толпится там</p>
+              </div>
+            </li>
+            <!-- Элемент списка достопримечательностей -->
+            <li class="lions-item lions-wrapper">
+              <img class="lions-img" src="#" alt="Панорамный вид на живописный горный красный каньон с участками зелёного массива">
+              <div class="lions-description lions-five">
+                <h3 class="lions-subtitle">Там есть мост дьявола</h3>
+                <p class="lions-subdescription">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
+              </div>
+            </li>
+          </ul>
       </section>
 
       <!-- Секция преимуществ -->
       <section class="advantages">
         <h2 class="visually-hidden">Преимущества отдыха в Седоне</h2>
+        <p class="advantages-headline headline">Приезжайте в Седону отдохнуть в комфорте и уюте!</p>
+        <p class="advantages-description description">Опытный персонал и качественное обслуживание!</p>
 
-        <p class="advantages-slogan">Приезжайте в Седону отдохнуть в комфорте и уюте!</p>
-        <p class="advantages-description">Опытный персонал и качественное обслуживание!</p>
         <!-- Список преимуществ -->
         <ul class="advantages-list">
           <!-- Элемент преимущества -->
@@ -133,26 +133,30 @@
       <!-- Секция с поиском гостиницы -->
       <section class="search">
         <h2 class="visually-hidden">Поиск гостиницы в Седоне</h2>
-        <p class="search-slogan">Заинтересовались?</p>
-        <p class="search-description">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+        <p class="search-headline headline">Заинтересовались?</p>
+        <p class="search-description description">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
 
-        <!-- Кнопка открытия модального окна -->
-        <button class="search-button button" type="button">Поиск гостиницы в Седоне</button>
+        <!-- Кнопка вызова модального окна -->
+        <!--
+          <button class="search-button button" type="button">Поиск гостиницы в Седоне</button>
+        -->
+        <!-- Ссылка для перехода на модальное окно с поиском гостиницы -->
+        <a class="search-link button" href="#">Хочу сюда!</a>
       </section>
 
       <!-- Секция с формой подписки -->
       <section class="subscription">
         <h2 class="visually-hidden">Подписка на новости</h2>
-        <p class="subscription-slogan">Подпишитесь на рассылку</p>
-        <p class="subscription-description">Только полезная информация и никакого спама, честное бойскаутское!</p>
+        <p class="subscription-headline headline">Подпишитесь на рассылку</p>
+        <p class="subscription-description description">Только полезная информация и никакого спама, честное бойскаутское!</p>
 
         <!-- Форма подписки на новости -->
-        <form action="#" method="post">
+        <form action="https://echo.htmlacademy.ru" method="post">
           <!-- Элемент поля ввода email -->
           <label for="email">
             <span class="visually-hidden">Ваш e-mail:</span>
           </label>
-            <input type="email" name="email" id="email" placeholder="Ваш e-mail" required>
+            <input type="email" name="email" id="email" placeholder="Ваш e-mail">
           <!-- Кнопка отправки формы -->
           <button class="subscription-button button" type="submit">Подписаться</button>
         </form>
@@ -168,32 +172,35 @@
           <!-- Список социальных сетей -->
           <ul class="social-list">
             <!-- Мы Вконтакте -->
-            <li class="social-item">
-              <a class="social-link social-button" href="#">
-                <img src="#" alt="Логотип Вконтакте"></a>
+            <li class="social-item social-item-vk ">
+              <a class="social-link social-button" href="https://vk.com/htmlacademy">
+                <img src="#" alt="Логотип Вконтакте">
+              </a>
             </li>
-            <!-- Мы в Twitter -->
-            <li class="social-item">
-              <a class="social-link social-button" href="#">
-                <img src="#" alt="Логотип Twitter"></a>
+            <!-- Мы в Телеграм -->
+            <li class="social-item social-item-tg">
+              <a class="social-link social-button" href="t.me/htmlacademy">
+                <img src="#" alt="Логотип Телеграм">
+              </a>
             </li>
             <!-- Мы на YouTube -->
-            <li class="social-item">
-              <a class="social-link social-button" href="#">
-                <img src="#" alt="Логотип YouTube"></a>
+            <li class="social-item social-item-yt">
+              <a class="social-link social-button" href="https://www.youtube.com/user/htmlacademyru">
+                <img src="#" alt="Логотип YouTube">
+              </a>
             </li>
           </ul>
         </div>
 
         <!-- Блок с контактным телефоном -->
         <div class="contact">
-          <a href="tel:+78128121212">+7 (812) 812-12-12</a>
+          <a class="contact-tel" href="tel:+78128121212">+7 (812) 812-12-12</a>
         </div>
 
         <!-- Блок с логотипом сайта разработчика -->
-        <div class="logo-development">
-          <a href="#">
-            <img src="#" alt="Логотип разработчика сайта">
+        <div class="development-logo">
+          <a href="https://htmlacademy.ru/">
+            <img src="#" alt="Логотип разработчика сайта HTML Academy">
           </a>
         </div>
       </div>
