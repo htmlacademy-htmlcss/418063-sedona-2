@@ -33,14 +33,28 @@
 
       <!-- Навигация пользователя -->
       <ul class="navigation-user">
+
         <!-- Элемент навигации "Поиск по сайту" -->
+        <!-- Вариант 1 (реализация через ссылку) -->
+        <!--
         <li class="navigation-user-item">
           <a class="navigation-user-link" href="#">
             <span class="visually-hidden">Поиск по сайту</span>
           </a>
         </li>
+        -->
+
+        <!-- Вариант 2 (реализация через форму поиска) -->
+        <li class="navigation-user-item navigation-user-search">
+          <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
+            <label class="visually-hidden" for="search-input">Поиск информации по сайту:
+              <input class="search-form-input" type="search" id="search-input" name="search">
+            </label>
+          </form>
+        </li>
+
         <!-- Элемент навигации "Избранное" -->
-        <li class="navigation-user-item">
+        <li class="navigation-user-item navigation-user-favorites">
           <a class="navigation-user-link" href="#">
             <span class="visually-hidden">Количество гостиниц в разделе `Избранное`</span>
             <span class="favorites-number">12</span>
@@ -72,7 +86,7 @@
 
     <!-- Секция подбора жилья по категориям и фильтрам -->
     <section class="catalog-filter">
-      <h2 class="visually-hidden">Подбор жилья по категориям и фильтрам</h2>
+      <h2 class="visually-hidden">Подбор жилья по категориям и фильтрам в Седоне</h2>
 
       <!-- Форма -->
       <form class="catalog-form" action="https://echo.htmlacademy.ru" method="get">
@@ -131,23 +145,21 @@
           <!-- Внутренняя обёртка блока -->
           <div class="catalog-price-wrapper">
             <!-- Блок с указанием минимальной стоимости -->
-            <div class="catalog-price">
+            <p class="catalog-price">
               <label class="visually-hidden" for="price-min">Минимальная стоимость</label>
-              <input type="number" id="price-min" name="price-min" value="0">
-              <span class="price-min">От</span>
-            </div>
+              <input type="number" id="price-min" name="price-min" value="0" placeholder="От">
+            </p>
             <!-- Блок с указанием максимальной стоимости -->
-            <div class="catalog-price">
+            <p class="catalog-price">
               <label class="visually-hidden" for="price-max">Максимальная стоимость</label>
-              <input type="number" id="price-max" name="price-max" value="9000">
-              <span class="price-max">До</span>
-            </div>
+              <input type="number" id="price-max" name="price-max" value="9000" placeholder="До">
+            </p>
           </div>
           <!-- Блок с элементом формы - range -->
-          <div class="catalog-price">
+          <p class="catalog-price">
             <label class="visually-hidden" for="price">Стоимость жилья:</label>
             <input type="range" id="price" name="price" min="0" max="9000">
-          </div>
+          </p>
         </fieldset>
         <!-- Кнопки формы -->
         <div class="catalog-form-buttons">
@@ -315,7 +327,7 @@
 
     <!-- Секция с формой подписки -->
     <section class="subscription">
-      <h2 class="visually-hidden">Подписка на новости</h2>
+      <h2 class="visually-hidden">Подписка на новости сайта</h2>
       <p class="subscription-headline headline">Подпишитесь на рассылку</p>
       <p class="subscription-description description">Только полезная информация и никакого спама, честное бойскаутское!</p>
 
@@ -331,6 +343,7 @@
       </form>
     </section>
   </main>
+
   <!-- Подвал сайта -->
   <footer class="footer-page">
     <!-- Внутренняя обёртка подвала -->
@@ -370,6 +383,5 @@
       </div>
     </div>
   </footer>
-
 </body>
 </html>
