@@ -428,9 +428,13 @@ body {
   background-color: #ffffff;
 }
 
+.catalog-container {
+  flex-grow: 1;
+}
+
 .catalog-wrapper {
-  padding: 35px 70px 70px 70px;
-  margin-top: -10px;
+  padding: 35px 70px 71px;
+  margin-top: -5px;
   color: #ffffff;
   background-image: url("../images/background-pages/filter-bg.jpg");
   background-color: #15306c;
@@ -441,7 +445,7 @@ body {
 .catalog-title {
   padding: 0;
   margin: 0;
-  margin-bottom: 5px;
+  margin-bottom: 7px;
   font-size: 60px;
   line-height: 78px;
   font-weight: 700;
@@ -453,7 +457,7 @@ body {
   flex-wrap: wrap;
   padding: 0;
   margin: 0;
-  margin-bottom: 43px;
+  margin-bottom: 41px;
   list-style: none;
 }
 
@@ -469,7 +473,6 @@ body {
 /* Form with filter */
 .catalog-form {
   display: flex;
-  justify-content: flex-start;
   flex-wrap: wrap;
   gap: 70px;
 }
@@ -478,6 +481,7 @@ body {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  min-width: 150px;
   padding: 0;
   margin: 0;
   border: none;
@@ -485,7 +489,6 @@ body {
 
 .catalog-form-price {
   display: flex;
-  flex-direction: column;
   flex-wrap: wrap;
   padding: 0;
   margin: 0;
@@ -572,7 +575,7 @@ body {
 .catalog-form-buttons {
   display: flex;
   flex-direction: column;
-  padding: 57px 0 0 0;
+  padding: 57px 0 0;
 }
 
 .button-apply {
@@ -598,21 +601,20 @@ body {
 
 /* Sorting */
 .catalog-sorting {
-  padding: 50px 70px 0 70px;
+  padding: 49px 70px 60px 70px;
 }
 
 .catalog-sorting-menu {
   display: flex;
+  justify-content: space-between;
   flex-wrap: wrap;
-  justify-content: flex-start;
-  gap: 37px;
   margin-bottom: 38px;
 }
 
 .sorting-title {
-  width: 500px;
+  width: 470px;
   padding: 0;
-  padding-top: 8px;
+  margin-top: 8px;
   color: #000000;
   text-align: left;
 }
@@ -639,6 +641,7 @@ body {
 
 /* Display card */
 .catalog-list-display {
+  width: 160px;
   padding: 0;
   margin: 0;
   list-style: none;
@@ -646,29 +649,29 @@ body {
 
 /* Catalog card */
 .card-list {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 19px 20px;
   padding: 0;
   margin: 0;
-  list-style: none;
+  margin-bottom: 40px;
+  list-style-type: none;
 }
 
 .card-item {
   display: grid;
-  gap: 16px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto 1fr;
+  gap: 16px 20px;
+  max-width: 300px;
   padding: 20px;
-  margin: 0;
-  font-size: 18px;
-  line-height: 21px;
-  outline-width: 1px;
   border-radius: 4px;
-  outline-style: solid;
-  outline-color: #e5e5e5;
+  box-shadow: 0 0 0 1px #e6e6e6;
 }
 
 .card-link {
-  display: block;
+  grid-column: 1 / -1;
+  width: 300px;
   text-decoration: none;
 }
 
@@ -687,31 +690,51 @@ body {
 }
 
 .card-type {
+  width: 140px;
+  font-size: 18px;
+  line-height: 21px;
   padding: 0;
   margin: 0;
+  text-align: left;
 }
 
 .card-price {
+  width: 140px;
+  font-size: 18px;
+  line-height: 21px;
   padding: 0;
   margin: 0;
+  text-align: right;
 }
 
 .card-button {
+  padding: 8px 15px 8px 27px;
+  margin: 0;
+  font-family: inherit;
+  font-weight: 700;
   font-size: 16px;
   line-height: 20px;
-  font-weight: 700;
   text-decoration: none;
 }
 
 .button-favorites {
+  padding: 8px 15px;
   background-color: #82b3d3;
 }
 
 .button-active {
+  padding: 8px 15px;
   background-color: #7db54f;
 }
 
+.card-stars {
+  padding: 0;
+  margin: 0;
+}
+
 .card-rating {
+  padding: 9px 11px;
+  margin: 0;
   font-size: 16px;
   line-height: 20px;
   text-align: center;
@@ -722,18 +745,33 @@ body {
 
 /* Pagination */
 .pagination {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 40px 0 0 0;
   margin: 0;
-  padding: 0;
+  border-top: 1px solid #e6e6e6;
   list-style: none;
 }
 
+.pagination-item-loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+}
+
 .pagination-link {
+  display: inline-block;
+  width: 60px;
+  padding: 10px 0 12px 0;
   font-size: 20px;
   line-height: 36px;
   font-weight: 700;
   color: #ffffff;
   text-align: center;
   text-decoration: none;
+  border-radius: 4px;
   background-color: #82b3d3;
 }
 
@@ -743,8 +781,24 @@ body {
 }
 
 /* Subscription for catalog.html */
+.subscription-catalog {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 97px 70px 105px 70px;
+  margin: 0;
+}
+
 .subscription-title-catalog {
+  padding: 0;
+  margin-bottom: 20px;
   color: #000000;
+}
+
+.subscription-text-catalog {
+  padding: 0 296px 0 297px;
+  margin-bottom: 54px;
 }
 
 /* Footer */
