@@ -631,6 +631,12 @@ body {
   text-decoration: none;
 }
 
+.breadcrumbs-link:hover,
+.breadcrumbs-link:focus,
+.breadcrumbs-link:active {
+  opacity: 0.6;
+}
+
 .link-home {
   display: inline-block;
   width: 14px;
