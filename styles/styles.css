@@ -106,7 +106,7 @@ body {
 .navigation-link-current::before {
   position: absolute;
   content: "";
-  bottom: 0;
+  bottom: -1px;
   left: 10px;
   width: calc(100% - 20px);
   border-bottom: 2px solid #756257;
@@ -142,7 +142,7 @@ body {
   flex-direction: column-reverse;
   justify-content: center;
   align-items: center;
-  min-width: 44px;
+  min-width: 45px;
   min-height: 64px;
 }
 
@@ -174,7 +174,7 @@ body {
   min-width: 20px;
   font-size: 10px;
   line-height: 10px;
-  padding: 5px 1px;
+  padding: 4px 0;
   color: #ffffff;
   background-color: #7db54f;
   border-radius: 100vw;
@@ -182,9 +182,12 @@ body {
 
 .navigation-button {
   display: block;
+  width: 160px;
+  padding: 8px 15px;
   margin: 0;
   margin-top: 14px;
   margin-left: 20px;
+  box-sizing: border-box;
   font-size: 16px;
   line-height: 20px;
   text-align: center;
@@ -203,7 +206,6 @@ body {
 }
 
 .button {
-  padding: 8px 34px;
   font-weight: 700;
   color: #ffffff;
   text-transform: uppercase;
@@ -228,12 +230,14 @@ body {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  padding: 50px 85px;
-  padding-bottom: 83px;
+  padding: 50px 85px 82px 85px;
   background-color: #a4cbe3;
   background-image: url("../images/background-pages/intro-bg.jpg");
-  background-size: cover;
   background-repeat: no-repeat;
+}
+
+.intro-img {
+  margin-top: 1px;
 }
 
 /* Advantages */
@@ -310,7 +314,7 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 30px;
-  padding: 113px 85px;
+  padding: 113px 85px 112px 85px;
 }
 
 .advantage-item:first-child .advantage-description,
@@ -372,7 +376,7 @@ body {
 
 /* Service */
 .service {
-  padding: 63px 0;
+  padding: 64px 0 63px 0;
 }
 
 .service-title {
@@ -405,7 +409,6 @@ body {
   width: 33.33%;
   padding: 182px 30px 80px 30px;
   text-align: center;
-  background-position: 50% 80px;
   background-repeat: no-repeat;
   box-sizing: border-box;
 }
@@ -416,15 +419,19 @@ body {
 
 .service-house {
   background-image: url("../images/icons/service/house.svg");
+  background-position: 50% 80px;
 }
 
 .service-food {
   background-image: url("../images/icons/service/food.svg");
+  background-position: 50% 81px;
 }
 
 .service-souvenir {
   background-image: url("../images/icons/service/souvenir.svg");
+  background-position: 50% 78px;
 }
+
 
 .service-subtitle {
   min-width: 43px;
@@ -524,8 +531,9 @@ body {
 }
 
 .subscription-input {
-  width: 433px;
-  padding: 5px 10px 0 10px;
+  width: 452px;
+  padding: 20px 15px 16px 10px;
+  box-sizing: border-box;
   font-family: inherit;
   background-color: #f2f2f2;
   border: none;
@@ -851,14 +859,15 @@ body {
 .catalog-form-buttons {
   display: flex;
   flex-direction: column;
-  gap: 34px;
+  gap: 33px;
   width: 190px;
-  padding: 57px 0 0;
+  padding: 56px 0 0;
 }
 
 .button-apply {
   width: 190px;
-  padding: 7px 10px;
+  padding: 8px 10px;
+  box-sizing: border-box;
   font-family: inherit;
   font-size: 16px;
   line-height: 20px;
@@ -1255,7 +1264,7 @@ body {
 /* Footer */
 .footer-page {
   width: 1200px;
-  padding: 45px 0;
+  padding: 45px 0 35px 0;
   margin: 0;
   background-color: #ffffff;
 }
