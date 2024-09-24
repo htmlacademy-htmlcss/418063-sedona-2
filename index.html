@@ -4,16 +4,17 @@
     <meta charset="utf-8">
     <title>Туристический город - Седона</title>
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" href="images/favicon.svg" sizes="32x32">
   </head>
   <body>
     <!-- Внутренняя обёртка сайта -->
     <div class="site-wrapper">
       <!-- Шапка сайта -->
-      <header class="header-page">
+      <header class="header-page" data-test="header">
         <!-- Навигация по сайту -->
         <nav class="navigation-page">
           <!-- Логотип сайта -->
-          <a class="header-logo" href="index.html" aria-current="page">
+          <a class="header-logo logo-current-page" href="index.html" aria-current="page">
             <img class="logo-img" src="images/logo.svg" width="140" height="70" alt="Логотип города с надписью Седона и минюатюрным изображением основной достопримечательности -
             мостом над каньоном">
           </a>
@@ -43,7 +44,7 @@
             </li>
 
             <!-- Элемент навигации "Избранное" -->
-            <li class="navigation-user-item">
+            <li class="navigation-user-item favorites-item">
               <a class="navigation-user-link menu-link favorites-link" href="#">
                 <span class="visually-hidden">Количество гостиниц в разделе "Избранное"</span>
                 <span class="favorites-number">12</span>
@@ -51,24 +52,24 @@
             </li>
             <!-- Элемент навигации "Поиск гостиницы" -->
             <li class="navigation-user-item">
-              <a class="navigation-button menu-link button" href="catalog.html">Хочу сюда!</a>
+              <a class="navigation-button button" href="#">Хочу сюда!</a>
             </li>
           </ul>
         </nav>
       </header>
 
       <!-- Основное содержание страницы -->
-      <main class="main-page main-container">
+      <main class="main-page main-container" data-test="main">
         <h1 class="visually-hidden">Седона - туристический город в Аризоне</h1>
 
         <!-- Секция с вступительной частью -->
-        <section class="intro">
+        <section class="intro" data-test="hero">
           <h2 class="visually-hidden">Добро пожаловать в Седону</h2>
           <img class="intro-img" src="images/welcome.svg" width="458" height="352" lang="en" alt="Welcome to the gorgeous Sedona, because the Grand Canyon sucks!">
         </section>
 
         <!-- Секция с преимуществами -->
-        <section class="advantages">
+        <section class="advantages" data-test="advantages">
             <h2 class="advantages-title title">Седона — небольшой городок в Аризоне, заслуживающий большего!</h2>
             <p class="advantages-text text">Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
 
@@ -78,7 +79,7 @@
               <li class="advantage-item advantage-wrapper">
                 <div class="advantage-description">
                   <h3 class="advantage-subtitle subtitle">Настоящий городок</h3>
-                  <p class="advantage-subdescription subdescription">Седона — не аттракцион для туристов, там течёт своя<br> жизнь</p>
+                  <p class="advantage-subdescription subdescription">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
                 </div>
                 <img class="advantage-img" src="images/advantages/city.jpg" width="800" height="385" alt="Изображение деревянного здания нежно-зелёного цвета на фоне цветущей зелении и гор">
               </li>
@@ -124,7 +125,7 @@
             <!-- Элемент списка качеств -->
             <li class="service-item service-house">
               <h3 class="service-subtitle subtitle">Жильё</h3>
-              <p class="service-subdescription subdescription">Рекомендуем пожить в настоящем мотеле, всё как&nbsp;в кино!</p>
+              <p class="service-subdescription subdescription">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
             </li>
             <!-- Элемент списка качеств -->
             <li class="service-item service-food">
@@ -140,7 +141,7 @@
         </section>
 
         <!-- Секция с поиском гостиницы -->
-        <section class="search">
+        <section class="search" data-test="search">
           <h2 class="visually-hidden">Быстрый подбор жилья</h2>
           <p class="search-headline title">Заинтересовались?</p>
           <p class="search-text text">Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в Седоне</p>
@@ -150,7 +151,7 @@
         </section>
 
         <!-- Секция с формой подписки -->
-        <section class="subscription-index">
+        <section class="subscription-index" data-test="subscribe">
           <h2 class="subscription-title-index title">Подпишитесь на рассылку</h2>
           <p class="subscription-text-index text">Только полезная информация и никакого спама, честное бойскаутское!</p>
 
@@ -160,7 +161,7 @@
             <label class="subscription-label" for="email">
               <span class="visually-hidden">Введите ваш e-mail:</span>
             </label>
-              <input class="subscription-input" type="email" name="email" id="email" placeholder="Ваш e-mail">
+              <input class="subscription-input" type="email" name="email" id="email" placeholder="Ваш e-mail" required>
             <!-- Кнопка отправки формы -->
             <button class="subscription-button button" type="submit">Подписаться</button>
           </form>
@@ -168,25 +169,25 @@
       </main>
 
       <!-- Подвал сайта -->
-      <footer class="footer-page">
+      <footer class="footer-page" data-test="footer">
         <div class="footer-wrapper">
           <!-- Список социальных сетей -->
           <ul class="social-list">
             <!-- Мы Вконтакте -->
-            <li class="social-item social-item-vk">
-              <a class="social-link" href="https://vk.com/htmlacademy">
+            <li class="social-item">
+              <a class="social-link vk-link" href="https://vk.com/htmlacademy">
                 <span class="visually-hidden">Перейти в группу Вконтакте"</span>
               </a>
             </li>
             <!-- Мы в Телеграм -->
-            <li class="social-item social-item-tg">
-              <a class="social-link" href="t.me/htmlacademy">
+            <li class="social-item">
+              <a class="social-link tg-link" href="t.me/htmlacademy">
                 <span class="visually-hidden">Перейти на канал в Телеграм"</span>
               </a>
             </li>
             <!-- Мы на YouTube -->
-            <li class="social-item social-item-yt">
-              <a class="social-link" href="https://www.youtube.com/user/htmlacademyru">
+            <li class="social-item">
+              <a class="social-link yt-link" href="https://www.youtube.com/user/htmlacademyru">
                 <span class="visually-hidden">Перейти на YouTube канал"</span>
               </a>
             </li>
@@ -205,6 +206,60 @@
           </a>
         </div>
       </footer>
+
+      <!-- Модальное окно -->
+      <div class="modal-container modal-container-close">
+        <div class="modal modal-auth">
+          <section class="modal-content">
+            <h2 class="modal-title title">Поиск гостиницы в Седоне</h2>
+            <!-- Форма подбора гостиницы -->
+            <form class="modal-form calendar" action="https://echo.htmlacademy.ru" method="post">
+              <p class="form-group calendar-data">
+                <label class="calendar-label" for="date-start">Дата Заезда:</label>
+                <input class="calendar-input data" type="text" id="date-start" name="data" value="27 апреля 2020" placeholder="Укажите дату заезда" required>
+                <span class="calendar-span error">Мы не можем отправить вас в прошлое.</span>
+              </p>
+              <p class="form-group calendar-data">
+                <label class="calendar-label" for="date-end">Дата Выезда:</label>
+                <input class="calendar-input data" type="text" id="date-end" name="data" value="1 сентября 2023" placeholder="Укажите дату выезда" required>
+                <span class="calendar-span">На эти даты есть свободные номера. Пока есть.</span>
+              </p>
+              <p class="form-group visitors">
+                <label class="calendar-label adults-label" for="adults">Взрослые:</label>
+                <button class="visitors-button button-minus" type="button">
+                  <span class="visually-hidden">Уменьшить количество посетителей</span>
+                </button>
+                <input class="calendar-input visitors-input" type="text" id="adults" name="adults" value="2" placeholder="0">
+                <button class="visitors-button button-plus" type="button">
+                  <span class="visually-hidden">Увеличить количество посетителей</span>
+                </button>
+              </p>
+              <p class="form-group visitors">
+                <span class="children-label-wrapper">
+                  <label class="calendar-label children-label" for="children">Дети:</label>
+                  <button class="tooltip-toggle" type="button">
+                    <span class="visually-hidden">Дополнительная информация</span>
+                  </button>
+                  <span class="tooltip-text" role="tooltip">Укажите количество детей, которые будут с вами, возраст которых от 6 до
+                    18 лет. Дети до 6 лет размещаются бесплатно.
+                  </span>
+                </span>
+                <button class="visitors-button button-minus" type="button">
+                  <span class="visually-hidden">Уменьшить количество посетителей</span>
+                </button>
+                <input class="calendar-input visitors-input" type="text" id="children" name="children" value="2" placeholder="0">
+                <button class="visitors-button button-plus" type="button">
+                  <span class="visually-hidden">Увеличить количество посетителей</span>
+                </button>
+              </p>
+              <button class="calendar-button button" type="submit">Найти</button>
+            </form>
+            <button class="modal-close-button">
+              <span class="visually-hidden">Закрыть</span>
+            </button>
+          </section>
+        </div>
+      </div>
     </div>
   </body>
 </html>

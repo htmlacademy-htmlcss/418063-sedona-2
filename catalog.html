@@ -4,12 +4,13 @@
   <meta charset="utf-8">
   <title>Каталог гостниц в Седоне</title>
   <link rel="stylesheet" href="styles/styles.css">
+  <link rel="icon" href="images/favicon.svg" sizes="32x32">
 </head>
 <body>
   <!-- Внутренняя обёртка сайта -->
   <div class="site-wrapper">
     <!-- Шапка сайта -->
-    <header class="header-page">
+    <header class="header-page" data-test="header">
       <!-- Навигация по сайту -->
       <nav class="navigation-page">
         <!-- Логотип сайта -->
@@ -30,7 +31,7 @@
           </li>
           <!-- Раздел сайта -->
           <li class="navigation-item">
-            <a class="navigation-link menu-link navigation-link-current" aria-current="page">Гостиницы</a>
+            <a class="navigation-link menu-link navigation-link-current" href="catalog.html" aria-current="page">Гостиницы</a>
           </li>
         </ul>
 
@@ -44,7 +45,7 @@
           </li>
 
           <!-- Элемент навигации "Избранное" -->
-          <li class="navigation-user-item">
+          <li class="navigation-user-item favorites-item">
             <a class="navigation-user-link menu-link favorites-link" href="#">
               <span class="visually-hidden">Количество гостиниц в разделе "Избранное"</span>
               <span class="favorites-number">12</span>
@@ -52,27 +53,27 @@
           </li>
           <!-- Элемент навигации "Поиск гостиницы" -->
           <li class="navigation-user-item">
-            <a class="navigation-button menu-link button">Хочу сюда!</a>
+            <a class="navigation-button button" href="#">Хочу сюда!</a>
           </li>
         </ul>
       </nav>
     </header>
 
     <!-- Основное содержимое страницы -->
-    <main class="catalog-page catalog-container">
+    <main class="catalog-page catalog-container" data-test="main">
       <!-- Внутренняя обёртка блока -->
-      <div class="catalog-wrapper">
+      <div class="catalog-wrapper" data-test="filter">
         <h1 class="catalog-title">Гостиницы Седоны</h1>
 
         <!-- Внутренняя навигация по странице -->
         <ul class="catalog-inner-nav breadcrumbs">
           <li class="breadcrumbs-item">
-            <a class="breadcrumbs-link link-home" href="index.html" tabindex="0">
+            <a class="breadcrumbs-link link-home" href="index.html">
               <span class="visually-hidden">Главная</span>
             </a>
           </li>
           <li class="breadcrumbs-item">
-            <a class="breadcrumbs-link breadcrumbs-link-current" aria-current="page">Гостиницы</a>
+            <a class="breadcrumbs-link breadcrumbs-link-current">Гостиницы</a>
           </li>
         </ul>
 
@@ -88,23 +89,24 @@
               <!-- Элемент формы - checkbox -->
               <li class="catalog-form-item">
                 <label class="catalog-control" for="pool">
-                  <input class="catalog-control-input" id="pool" type="checkbox" name="pool" checked>Бассейн
+                  <input class="catalog-control-input input-checkbox" id="pool" type="checkbox" name="pool" checked>Бассейн
                 </label>
               </li>
               <!-- Элемент формы - checkbox -->
               <li class="catalog-form-item">
                 <label class="catalog-control" for="parking">
-                  <input class="catalog-control-input" id="parking" type="checkbox" name="parking" checked>Парковка
+                  <input class="catalog-control-input input-checkbox" id="parking" type="checkbox" name="parking" checked>Парковка
                 </label>
               </li>
               <!-- Элемент формы - checkbox -->
               <li class="catalog-form-item">
                 <label class="catalog-control" for="wi-fi">
-                  <input class="catalog-control-input" id="wi-fi" type="checkbox" name="wi-fi">Wi-Fi
+                  <input class="catalog-control-input input-checkbox" id="wi-fi" type="checkbox" name="wi-fi">Wi-Fi
                 </label>
               </li>
             </ul>
           </fieldset>
+
           <!-- Группа с элементами форм - radio -->
           <fieldset class="catalog-form-group">
             <legend class="catalog-form-title">Тип жилья:</legend>
@@ -112,25 +114,24 @@
               <!-- Элемент формы - radio -->
               <li class="catalog-form-item">
                 <label class="catalog-control" for="hotel">
-                  <input class="catalog-control-input" id="hotel" type="radio" name="type-housing" value="hotel" checked>Гостиница
+                  <input class="catalog-control-input input-radio" id="hotel" type="radio" name="type-housing" value="hotel" checked>Гостиница
                 </label>
               </li>
               <!-- Элемент формы - radio -->
               <li class="catalog-form-item">
                 <label class="catalog-control" for="motel">
-                  <input class="catalog-control-input" id="motel" type="radio" name="type-housing" value="motel">Мотель
+                  <input class="catalog-control-input input-radio" id="motel" type="radio" name="type-housing" value="motel">Мотель
                 </label>
               </li>
               <!-- Элемент формы - radio -->
               <li class="catalog-form-item">
                 <label class="catalog-control" for="apartments">
-                  <input class="catalog-control-input" id="apartments" type="radio" name="type-housing" value="apartments">Апартаменты
+                  <input class="catalog-control-input input-radio" id="apartments" type="radio" name="type-housing" value="apartments">Апартаменты
                 </label>
               </li>
             </ul>
           </fieldset>
-
-          <!-- Группа с элементами форм - number -->
+          <!-- Группа с элементами форм -->
           <fieldset class="catalog-form-group catalog-form-price">
             <legend class="catalog-form-title">Стоимость, ₽:</legend>
             <!-- Внутренняя обёртка блока -->
@@ -138,15 +139,25 @@
               <!-- Блок с указанием минимальной стоимости -->
               <p class="catalog-price">
                 <label class="price-label" for="price-min">От</label>
-                <input class="price-input price-input-min" type="number" id="price-min" name="price-min" value="0" placeholder="0">
+                <input class="price-input price-input-min" type="text" id="price-min" name="price-min" value="0" placeholder="0">
               </p>
               <!-- Блок с указанием максимальной стоимости -->
               <p class="catalog-price">
                 <label class="price-label" for="price-max">До</label>
-                <input class="price-input price-input-max" type="number" id="price-max" name="price-max" value="9000" placeholder="9000">
+                <input class="price-input price-input-max" type="text" id="price-max" name="price-max" value="9000" placeholder="9000">
               </p>
             </div>
-            <!-- Блок с элементом формы - range. Позже внести правки -->
+            <!-- Блок с формой - range -->
+            <div class="range-wrapper">
+              <div class="range">
+                <button class="range-toggle toggle-min" type="button">
+                  <span class="visually-hidden">Выбор минимальной стоимости</span>
+                </button>
+                <button class="range-toggle toggle-max" type="button">
+                  <span class="visually-hidden">Выбор максимальной стоимости</span>
+                </button>
+              </div>
+            </div>
           </fieldset>
           <!-- Кнопки формы -->
           <div class="catalog-form-buttons">
@@ -157,7 +168,7 @@
       </div>
 
       <!-- Секция c каталогом жилья -->
-      <section class="catalog-sorting">
+      <section class="catalog-sorting" data-test="catalog">
         <div class="catalog-sorting-menu">
           <h2 class="sorting-title title">Найдено гостиниц:
             <span class="result-number">38</span>
@@ -173,19 +184,19 @@
           <ul class="catalog-list-display">
             <!-- Отображение объекта на странице (иконка) -->
             <li class="position-card">
-              <a class="button-icon display-button display-button-active" href="#">
+              <a class="display-button button-icon display-button-active" href="#">
                 <span class="visually-hidden">Отобразить объекты в виде иконок</span>
               </a>
             </li>
             <!-- Отображение объекта на странице (галерея) -->
             <li class="position-card">
-              <a class="button-gallery display-button" href="#">
+              <a class="display-button button-gallery" href="#">
                 <span class="visually-hidden">Отобразить объекты в виде галереи</span>
               </a>
             </li>
             <!-- Отображение объекта на странице (список) -->
             <li class="position-card">
-              <a class="button-list display-button" href="#">
+              <a class="display-button button-list" href="#">
                 <span class="visually-hidden">Отобразить объекты в виде списка</span>
               </a>
             </li>
@@ -279,7 +290,7 @@
         <!-- Блок с пагинацией -->
         <ul class="pagination">
           <li class="pagination-item pagination-item-current">
-            <a class="pagination-link pagination-link-current" href="#">1</a>
+            <a class="pagination-link pagination-link-current">1</a>
           </li>
           <li class="pagination-item">
             <a class="pagination-link" href="#">2</a>
@@ -300,7 +311,7 @@
       </section>
 
       <!-- Секция с формой подписки -->
-      <section class="subscription-catalog">
+      <section class="subscription-catalog" data-test="subscribe">
         <h2 class="subscription-title-catalog title">Подпишитесь на рассылку</h2>
         <p class="subscription-text-catalog text">Только полезная информация и никакого спама, честное бойскаутское!</p>
 
@@ -310,7 +321,7 @@
           <label class="subscription-label" for="email">
             <span class="visually-hidden">Введите ваш e-mail:</span>
           </label>
-            <input class="subscription-input" type="email" name="email" id="email" placeholder="Ваш e-mail">
+            <input class="subscription-input" type="email" name="email" id="email" placeholder="Ваш e-mail" required>
           <!-- Кнопка отправки формы -->
           <button class="subscription-button button" type="submit">Подписаться</button>
         </form>
@@ -318,25 +329,25 @@
     </main>
 
     <!-- Подвал сайта -->
-    <footer class="footer-page">
+    <footer class="footer-page" data-test="footer">
       <div class="footer-wrapper">
         <!-- Список социальных сетей -->
         <ul class="social-list">
           <!-- Мы Вконтакте -->
-          <li class="social-item social-item-vk">
-            <a class="social-link" href="https://vk.com/htmlacademy">
+          <li class="social-item">
+            <a class="social-link vk-link" href="https://vk.com/htmlacademy">
               <span class="visually-hidden">Перейти в группу Вконтакте"</span>
             </a>
           </li>
           <!-- Мы в Телеграм -->
-          <li class="social-item social-item-tg">
-            <a class="social-link" href="t.me/htmlacademy">
+          <li class="social-item">
+            <a class="social-link tg-link" href="t.me/htmlacademy">
               <span class="visually-hidden">Перейти на канал в Телеграм"</span>
             </a>
           </li>
           <!-- Мы на YouTube -->
-          <li class="social-item social-item-yt">
-            <a class="social-link" href="https://www.youtube.com/user/htmlacademyru">
+          <li class="social-item">
+            <a class="social-link yt-link" href="https://www.youtube.com/user/htmlacademyru">
               <span class="visually-hidden">Перейти на YouTube канал"</span>
             </a>
           </li>
