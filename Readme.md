@@ -1,8 +1,8 @@
 # Личный проект «Седона»
 
 * Студент: [Мария Масич](https://up.htmlacademy.ru/htmlcss-individual/2/user/418063).
-* Наставник: `Неизвестно`.
-
+* Наставник: [Анна Лисененкова](https://htmlacademy.ru/profile/ankhena).
+* Сайт: [Личный проект Седона](https://marimasich.github.io/418063-sedona-2/).
 ---
 
 _Не удаляйте и не обращайте внимание на файлы:_<br>

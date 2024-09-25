@@ -2,11 +2,264 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>HTML Academy: Седона</title>
+    <title>Туристический город - Седона</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" href="favicon.ico" sizes="32x32">
   </head>
   <body>
+    <!-- Внутренняя обёртка сайта -->
+    <div class="site-wrapper">
+      <!-- Шапка сайта -->
+      <header class="header-page" data-test="header">
+        <!-- Навигация по сайту -->
+        <nav class="navigation-page">
+          <!-- Логотип сайта -->
+          <a class="header-logo logo-current-page" href="index.html" aria-current="page">
+            <img class="logo-img" src="images/logo.svg" width="140" height="70" alt="Логотип города с надписью Седона и минюатюрным изображением основной достопримечательности -
+            мостом над каньоном">
+          </a>
 
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS. Профессиональная вёрстка сайтов</a>».</p>
+          <!-- Основные разделы сайта -->
+          <ul class="navigation-list">
+            <!-- Раздел сайта -->
+            <li class="navigation-item">
+              <a class="navigation-link menu-link navigation-link-current" href="index.html" aria-current="page">Главная</a>
+            </li>
+            <!-- Раздел сайта -->
+            <li class="navigation-item">
+              <a class="navigation-link menu-link" href="#">О Седоне</a>
+            </li>
+            <!-- Раздел сайта -->
+            <li class="navigation-item">
+              <a class="navigation-link menu-link" href="catalog.html">Гостиницы</a>
+            </li>
+          </ul>
+          <!-- Навигация пользователя -->
+          <ul class="navigation-user">
+            <!-- Элемент навигации "Поиск по сайту" -->
+            <li class="navigation-user-item">
+              <a class="navigation-user-link menu-link search-link" href="#">
+                <span class="visually-hidden">Поиск по сайту</span>
+              </a>
+            </li>
 
+            <!-- Элемент навигации "Избранное" -->
+            <li class="navigation-user-item favorites-item">
+              <a class="navigation-user-link menu-link favorites-link" href="#">
+                <span class="visually-hidden">Количество гостиниц в разделе "Избранное"</span>
+                <span class="favorites-number">12</span>
+              </a>
+            </li>
+            <!-- Элемент навигации "Поиск гостиницы" -->
+            <li class="navigation-user-item">
+              <a class="navigation-button button" href="#">Хочу сюда!</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+
+      <!-- Основное содержание страницы -->
+      <main class="main-page main-container" data-test="main">
+        <h1 class="visually-hidden">Седона - туристический город в Аризоне</h1>
+
+        <!-- Секция с вступительной частью -->
+        <section class="intro" data-test="hero">
+          <h2 class="visually-hidden">Добро пожаловать в Седону</h2>
+          <img class="intro-img" src="images/welcome.svg" width="458" height="352" lang="en" alt="Welcome to the gorgeous Sedona, because the Grand Canyon sucks!">
+        </section>
+
+        <!-- Секция с преимуществами -->
+        <section class="advantages" data-test="advantages">
+            <h2 class="advantages-title title">Седона — небольшой городок в Аризоне, заслуживающий большего!</h2>
+            <p class="advantages-text text">Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
+
+            <!-- Список преимуществ -->
+            <ul class="advantages-list">
+              <!-- Элемент списка преимуществ -->
+              <li class="advantage-item advantage-wrapper">
+                <div class="advantage-description">
+                  <h3 class="advantage-subtitle subtitle">Настоящий городок</h3>
+                  <p class="advantage-subdescription subdescription">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
+                </div>
+                <img class="advantage-img" src="images/advantages/city.jpg" width="800" height="385" alt="Изображение деревянного здания нежно-зелёного цвета на фоне цветущей зелении и гор">
+              </li>
+              <!-- Элемент списка преимуществ -->
+              <li class="advantage-item">
+                <div class="advantage-description">
+                  <h3 class="advantage-subtitle subtitle">Небольшая площадь</h3>
+                  <p class="advantage-subdescription subdescription">Все достопримечательности находятся очень близко</p>
+                </div>
+              </li>
+              <!-- Элемент списка преимуществ -->
+              <li class="advantage-item">
+                <div class="advantage-description">
+                  <h3 class="advantage-subtitle subtitle">Красивая дорога</h3>
+                  <p class="advantage-subdescription subdescription">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+                </div>
+              </li>
+              <!-- Элемент списка преимуществ -->
+              <li class="advantage-item">
+                <div class="advantage-description">
+                  <h3 class="advantage-subtitle subtitle">Мало туристов</h3>
+                  <p class="advantage-subdescription subdescription">Большинство едет в Гранд Каньон и толпится там</p>
+                </div>
+              </li>
+              <!-- Элемент списка преимуществ -->
+              <li class="advantage-item advantage-wrapper">
+                <div class="advantage-description">
+                  <h3 class="advantage-subtitle subtitle">Там есть<br> мост дьявола</h3>
+                  <p class="advantage-subdescription subdescription">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
+                </div>
+                <img class="advantage-img" src="images/advantages/bridge.jpg" width="800" height="385" alt="Панорамный вид на живописный горный красный каньон с участками зелёного массива">
+              </li>
+            </ul>
+        </section>
+
+        <!-- Секция клиентский сервис  -->
+        <section class="service">
+          <h2 class="service-title title">Приезжайте в Седону отдохнуть в комфорте и уюте!</h2>
+          <p class="service-text text">Опытный персонал и качественное обслуживание!</p>
+
+          <!-- Список качеств хорошего сервиса -->
+          <ul class="service-list">
+            <!-- Элемент списка качеств -->
+            <li class="service-item service-house">
+              <h3 class="service-subtitle subtitle">Жильё</h3>
+              <p class="service-subdescription subdescription">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
+            </li>
+            <!-- Элемент списка качеств -->
+            <li class="service-item service-food">
+              <h3 class="service-subtitle subtitle">Еда</h3>
+              <p class="service-subdescription subdescription">Всегда заказывайте топовый&nbsp;фирменный&nbsp;бургер, вы не разочаруетесь!</p>
+            </li>
+            <!-- Элемент списка качеств -->
+            <li class="service-item service-souvenir">
+              <h3 class="service-subtitle subtitle">Сувениры</h3>
+              <p class="service-subdescription subdescription">Не только китайского, но&nbsp;и настоящего местного производства!</p>
+            </li>
+          </ul>
+        </section>
+
+        <!-- Секция с поиском гостиницы -->
+        <section class="search" data-test="search">
+          <h2 class="visually-hidden">Быстрый подбор жилья</h2>
+          <p class="search-headline title">Заинтересовались?</p>
+          <p class="search-text text">Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+
+          <!-- Кнопка вызова модального окна -->
+          <button class="search-button button" type="button">Поиск гостиницы в Седоне</button>
+        </section>
+
+        <!-- Секция с формой подписки -->
+        <section class="subscription-index" data-test="subscribe">
+          <h2 class="subscription-title-index title">Подпишитесь на рассылку</h2>
+          <p class="subscription-text-index text">Только полезная информация и никакого спама, честное бойскаутское!</p>
+
+          <!-- Форма подписки на новости -->
+          <form class="subscription-form" action="https://echo.htmlacademy.ru" method="post">
+            <!-- Элемент поля ввода email -->
+            <label class="subscription-label" for="email">
+              <span class="visually-hidden">Введите ваш e-mail:</span>
+            </label>
+              <input class="subscription-input" type="email" name="email" id="email" placeholder="Ваш e-mail" required>
+            <!-- Кнопка отправки формы -->
+            <button class="subscription-button button" type="submit">Подписаться</button>
+          </form>
+        </section>
+      </main>
+
+      <!-- Подвал сайта -->
+      <footer class="footer-page" data-test="footer">
+        <div class="footer-wrapper">
+          <!-- Список социальных сетей -->
+          <ul class="social-list">
+            <!-- Мы Вконтакте -->
+            <li class="social-item">
+              <a class="social-link vk-link" href="https://vk.com/htmlacademy">
+                <span class="visually-hidden">Перейти в группу Вконтакте"</span>
+              </a>
+            </li>
+            <!-- Мы в Телеграм -->
+            <li class="social-item">
+              <a class="social-link tg-link" href="t.me/htmlacademy">
+                <span class="visually-hidden">Перейти на канал в Телеграм"</span>
+              </a>
+            </li>
+            <!-- Мы на YouTube -->
+            <li class="social-item">
+              <a class="social-link yt-link" href="https://www.youtube.com/user/htmlacademyru">
+                <span class="visually-hidden">Перейти на YouTube канал"</span>
+              </a>
+            </li>
+          </ul>
+          <!-- Блок с контактными данными -->
+          <address class="contact">
+            <a class="contact-tel" href="tel:+78128121212">+7 (812) 812-12-12</a>
+          </address>
+
+          <!-- Блок с логотипом сайта разработчика -->
+          <a class="developer-link" href="https://htmlacademy.ru/">
+            <span class="visually-hidden">Перейти на сайт разработчика - HTML Academy</span>
+            <svg class="developer-icon" xmlns="http://www.w3.org/2000/svg" width="115" height="34" viewBox="0 0 115 34" fill="currentColor">
+              <path d="M0 13.256v2.6h2.5v-2.6H0ZM11.6 4.856c-1.6 0-2.8.7-3.6 1.7h-.1v-6.2h-2v15.5h2v-5.3c0-2.1 1.3-3.6 3.3-3.6 1.8 0 2.9 1.4 2.9 3.2v5.7h2v-6.1c.1-3-1.8-4.9-4.5-4.9ZM26.6 5.156h-4.8v-3.7h-2v3.8h-1.9v2h1.9v6c0 1.7 1 2.7 2.7 2.7h4.1v-2h-3.7c-.7 0-1.1-.4-1.1-1.1v-5.7h4.8v-2ZM41.1 4.956c-1.6 0-2.9.8-3.5 2.1h-.1c-.6-1.2-1.8-2.1-3.4-2.1-1.4 0-2.5.8-3.1 1.8h-.1v-1.6H29v10.6h2v-5.4c0-2 1-3.5 2.6-3.5 1.5 0 2.4 1 2.4 2.6v6.3h2v-5.6c0-2.4 1.4-3.3 2.6-3.3 1.5 0 2.4 1 2.4 2.6v6.3h2v-6.5c.1-2.5-1.4-4.3-3.9-4.3ZM47.8 13.056c0 1.7 1 2.7 2.8 2.7h2v-2h-1.7c-.7 0-1.1-.4-1.1-1.1V.356h-2v12.7ZM28.9 20.056c-.9-1.1-2.2-1.8-3.9-1.8-3.1 0-5.4 2.3-5.4 5.6s2.3 5.6 5.4 5.6c1.8 0 3-.8 3.8-1.9h.1v1.6h2v-10.6h-2v1.5Zm-3.6 7.4c-2.2 0-3.6-1.6-3.6-3.6s1.4-3.6 3.6-3.6 3.6 1.6 3.6 3.6c0 1.9-1.4 3.6-3.6 3.6ZM44.2 22.356c-.5-2.4-2.6-4.1-5.4-4.1-3.4 0-5.6 2.5-5.6 5.6 0 3.1 2.2 5.6 5.6 5.6 2.8 0 4.9-1.8 5.4-4.2h-2.1c-.4 1.3-1.7 2.3-3.3 2.3-2.2 0-3.6-1.6-3.6-3.6s1.4-3.6 3.6-3.6c1.6 0 2.8 1 3.3 2.2h2.1v-.2ZM55.1 20.056c-.9-1.1-2.2-1.8-3.9-1.8-3.1 0-5.4 2.3-5.4 5.6s2.3 5.6 5.4 5.6c1.8 0 3-.8 3.8-1.9h.1v1.6h2v-10.6h-2v1.5Zm-3.6 7.4c-2.2 0-3.6-1.6-3.6-3.6s1.4-3.6 3.6-3.6 3.6 1.6 3.6 3.6c0 1.9-1.5 3.6-3.6 3.6ZM68.7 20.156c-.9-1.1-2.2-1.9-3.9-1.9-3.1 0-5.4 2.3-5.4 5.6s2.2 5.6 5.4 5.6c1.7 0 3-.8 3.8-1.8h.1v1.5h2v-15.4h-2v6.4Zm-3.6 7.3c-2.2 0-3.6-1.6-3.6-3.6s1.4-3.6 3.6-3.6 3.6 1.6 3.6 3.6c-.1 2-1.5 3.6-3.6 3.6ZM78.3 18.256c-3.3 0-5.5 2.5-5.5 5.6 0 3 2.1 5.6 5.5 5.6 2.5 0 4.5-1.3 5.2-3.6h-2.1c-.5 1-1.6 1.6-3 1.6-1.9 0-3.3-1.3-3.4-2.9h8.8c.2-3.6-2-6.3-5.5-6.3Zm0 1.9c1.7 0 3 1 3.3 2.6h-6.5c.3-1.5 1.5-2.6 3.2-2.6ZM98.2 18.256c-1.6 0-2.9.8-3.6 2h-.1c-.6-1.2-1.8-2-3.4-2-1.4 0-2.5.7-3.1 1.8v-1.5h-1.9v10.6h2v-5.4c0-2 1-3.4 2.6-3.5 1.5 0 2.4 1 2.4 2.6v6.3h2v-5.6c0-2.4 1.4-3.3 2.6-3.3 1.5 0 2.4 1 2.4 2.6v6.3h2v-6.5c.1-2.6-1.4-4.4-3.9-4.4ZM109.4 27.356l-3.6-8.9h-2.2l4.8 11.6c-.3.9-.7 1.2-1.7 1.2h-2.5v2h2.5c1.8 0 2.8-.8 3.5-2.6l4.7-12.2h-2.1l-3.4 8.9Z"/>
+            </svg>
+          </a>
+        </div>
+      </footer>
+
+      <!-- Модальное окно -->
+      <div class="modal-container modal-container-close">
+        <div class="modal modal-auth">
+          <section class="modal-content">
+            <h2 class="modal-title title">Поиск гостиницы в Седоне</h2>
+            <!-- Форма подбора гостиницы -->
+            <form class="modal-form calendar" action="https://echo.htmlacademy.ru" method="post">
+              <p class="form-group calendar-data">
+                <label class="calendar-label" for="date-start">Дата Заезда:</label>
+                <input class="calendar-input data" type="text" id="date-start" name="data" value="27 апреля 2020" placeholder="Укажите дату" required>
+                <span class="calendar-span error">Мы не можем отправить вас в прошлое.</span>
+              </p>
+              <p class="form-group calendar-data">
+                <label class="calendar-label" for="date-end">Дата Выезда:</label>
+                <input class="calendar-input data" type="text" id="date-end" name="data" value="1 сентября 2023" placeholder="Укажите дату" required>
+                <span class="calendar-span">На эти даты есть свободные номера. Пока есть.</span>
+              </p>
+              <p class="form-group visitors">
+                <label class="calendar-label adults-label" for="adults">Взрослые:</label>
+                <button class="visitors-button button-minus" type="button">
+                  <span class="visually-hidden">Уменьшить количество посетителей</span>
+                </button>
+                <input class="calendar-input visitors-input" type="text" id="adults" name="adults" value="2" placeholder="0">
+                <button class="visitors-button button-plus" type="button">
+                  <span class="visually-hidden">Увеличить количество посетителей</span>
+                </button>
+              </p>
+              <p class="form-group visitors">
+                <span class="children-label-wrapper">
+                  <label class="calendar-label children-label" for="children">Дети:</label>
+                  <button class="tooltip-toggle" type="button">
+                    <span class="visually-hidden">Дополнительная информация</span>
+                  </button>
+                  <span class="tooltip-text" role="tooltip">Укажите количество детей, которые будут с вами, возраст которых от 6 до
+                    18 лет. Дети до 6 лет размещаются бесплатно.
+                  </span>
+                </span>
+                <button class="visitors-button button-minus" type="button">
+                  <span class="visually-hidden">Уменьшить количество посетителей</span>
+                </button>
+                <input class="calendar-input visitors-input" type="text" id="children" name="children" value="2" placeholder="0">
+                <button class="visitors-button button-plus" type="button">
+                  <span class="visually-hidden">Увеличить количество посетителей</span>
+                </button>
+              </p>
+              <button class="calendar-button button" type="submit">Найти</button>
+            </form>
+            <button class="modal-close-button">
+              <span class="visually-hidden">Закрыть</span>
+            </button>
+          </section>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
