@@ -227,16 +227,21 @@ body {
 /* Intro */
 .intro {
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
   padding: 50px 85px 82px 85px;
   background-color: #a4cbe3;
   background-image: url("../images/background-pages/intro-bg.jpg");
+  background-size: cover;
+  background-position: 50%;
   background-repeat: no-repeat;
 }
 
 .intro-img {
   margin-top: 1px;
+  object-fit: contain;
 }
 
 /* Advantages */
@@ -296,7 +301,6 @@ body {
 
 .advantage-item:first-child,
 .advantage-item:last-child {
-  width: 100%;
   background-color: #82b3d3;
 }
 
@@ -306,6 +310,8 @@ body {
 
 .advantage-wrapper {
   display: flex;
+  width: 100%;
+  overflow: hidden;
 }
 
 .advantage-description {
@@ -323,6 +329,7 @@ body {
 
 .advantage-img {
   margin: auto;
+  object-fit: cover;
 }
 
 .subtitle {
@@ -404,7 +411,6 @@ body {
   display: flex;
   flex-direction: column;
   gap: 30px;
-  flex-grow: 1;
   width: 33.33%;
   padding: 182px 30px 80px 30px;
   text-align: center;
@@ -497,6 +503,7 @@ body {
 
 .search-button:disabled {
   background-color: #e5e5e5;
+  pointer-events: none;
 }
 
 /* Subscription for index.html */
@@ -547,6 +554,11 @@ body {
   color: rgba(0, 0, 0, 0.6);
 }
 
+.subscription-input:hover,
+.subscription-input:focus {
+  background-color: #e6e6e6;
+}
+
 .subscription-button {
   min-width: 232px;
   max-width: 250px;
@@ -570,6 +582,7 @@ body {
 
 .subscription-button:disabled {
   background-color: #e5e5e5;
+  pointer-events: none;
 }
 
 /* Catalog.html */
@@ -639,10 +652,12 @@ body {
   text-decoration: none;
 }
 
-.breadcrumbs-link:not(.breadcrumbs-link-current):hover,
-.breadcrumbs-link:not(.breadcrumbs-link-current):focus,
-.breadcrumbs-link:not(.breadcrumbs-link-current):active {
+.breadcrumbs-link:not(.breadcrumbs-link-current):hover {
   opacity: 0.6;
+}
+
+.breadcrumbs-link:not(.breadcrumbs-link-current):active {
+  opacity: 0.3;
 }
 
 .link-home {
@@ -887,6 +902,7 @@ body {
 
 .button-apply:disabled {
   background-color: #e5e5e5;
+  pointer-events: none;
 }
 
 .button-reset {
@@ -914,6 +930,7 @@ body {
 
 .button-reset:disabled {
   color: rgba(255, 255, 255, 0.2);
+  pointer-events: none;
 }
 
 /* Sorting */
@@ -923,15 +940,15 @@ body {
 
 .catalog-sorting-menu {
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
   margin-bottom: 41px;
 }
 
 .sorting-title {
-  width: 470px;
+  min-width: 400px;
   padding: 0;
   margin-top: 7px;
+  margin-right: auto;
   text-align: left;
   color: #000000;
 }
@@ -944,12 +961,14 @@ body {
 
 /* Select */
 .catalog-select-control {
-  width: 292px;
-  padding: 5px 17px;
+  min-width: 292px;
+  padding: 5px 48px 5px 17px;
+  margin-left: auto;
   font-family: inherit;
   font-size: 18px;
   line-height: 21px;
   color: #333333;
+  background-color: #ffffff;
   background-image: url("../images/icons/arrow-down.svg");
   background-repeat: no-repeat;
   background-position: calc(100% - 19px) 50%;
@@ -968,6 +987,7 @@ body {
   color: #000000;
   border-color: #000000;
   opacity: 0.3;
+  pointer-events: none;
 }
 
 /* Display card */
@@ -981,6 +1001,7 @@ body {
   min-height: 48px;
   padding: 0;
   margin: 0;
+  margin-left: auto;
   list-style: none;
 }
 
@@ -1047,6 +1068,7 @@ body {
   grid-column: 1 / -1;
   width: 300px;
   text-decoration: none;
+  overflow: hidden;
 }
 
 .card-link:not(.card-link-img):hover,
@@ -1064,6 +1086,11 @@ body {
 .card-link-img:active {
   opacity: 0.9;
   transition: 0.3s ease;
+}
+
+.card-img {
+  display: block;
+  object-fit: cover;
 }
 
 .card-title {
@@ -1132,6 +1159,7 @@ body {
 
 .button-favorites:disabled {
   background-color: #e5e5e5;
+  pointer-events: none;
 }
 
 .button-active {
@@ -1151,6 +1179,7 @@ body {
 
 .button-active:disabled {
   background-color: #e5e5e5;
+  pointer-events: none;
 }
 
 .card-stars {
@@ -1355,20 +1384,31 @@ body {
 }
 
 /* Development */
-.developer-icon {
+.developer-link {
   display: block;
-  width: 115px;
-  height: 34px;
-  fill: #000000;
+  min-width: 115px;
 }
 
-.developer-link:hover .developer-icon,
-.developer-link:focus .developer-icon {
-  fill: #756157;
+.developer-link::before {
+  display: flex;
+  align-items: center;
+  content: "";
+  min-width: 115px;
+  min-height: 34px;
+  mask-image: url("../images/developer-logo.svg");
+  mask-size: 115px 34px;
+  mask-repeat: no-repeat;
+  mask-position: 50%;
+  background: #000000;
 }
 
-.developer-link:active .developer-icon {
-  fill: rgba(117, 97, 87, 0.3);
+.developer-link:hover::before,
+.developer-link:focus::before {
+  background: #756157;
+}
+
+.developer-link:active::before {
+  background: rgba(117, 97, 87, 0.3);
 }
 
 /* Modal */
@@ -1549,7 +1589,7 @@ body {
 }
 
 .button-plus:active::before {
-  background: rgba(117, 97, 87, 0.3);
+  background: rgba(0, 0, 0, 0.2);
 }
 
 .visitors-input {
@@ -1661,6 +1701,7 @@ body {
 
 .calendar-button:disabled {
   background-color: #e5e5e5;
+  pointer-events: none;
 }
 
 .modal-close-button {
