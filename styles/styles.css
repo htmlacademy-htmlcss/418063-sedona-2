@@ -559,6 +559,11 @@ body {
   background-color: #e6e6e6;
 }
 
+.subscription-input:disabled {
+  opacity: 0.3;
+  pointer-events: none;
+}
+
 .subscription-button {
   min-width: 232px;
   max-width: 250px;
@@ -736,6 +741,11 @@ body {
   opacity: 0.3;
 }
 
+.catalog-control:has(.catalog-control-input:disabled) {
+  opacity: 0.3;
+  pointer-events: none;
+}
+
 .catalog-control-input {
   position: relative;
   top: 4px;
@@ -801,6 +811,12 @@ body {
   text-align: right;
   color: rgba(0, 0, 0, 0.3);
   text-transform: lowercase;
+}
+
+.price-label + .price-input:disabled {
+  color: rgba(0, 0, 0, 0.3);
+  opacity: 0.3;
+  pointer-events: none;
 }
 
 .price-input {
@@ -1507,6 +1523,11 @@ body {
   background-color: #e6e6e6;
 }
 
+.calendar-input:disabled {
+  opacity: 0.3;
+  pointer-events: none;
+}
+
 .data {
   padding: 13px 55px 10px 20px;
   margin: 0;
@@ -1546,6 +1567,11 @@ body {
   text-align: center;
   background-color: #f2f2f2;
   border: 1px solid transparent;
+}
+
+.visitors-button:disabled {
+  opacity: 0.3;
+  pointer-events: none;
 }
 
 .button-minus {
